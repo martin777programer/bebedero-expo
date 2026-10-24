@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Proyecto integrador de un bebedero con sensor ultrasónico, Arduino, servomotor y selección de agua fría o caliente.">
+
+    <meta name="theme-color" content="#102c36">
+
+    <title>Bebedero Inteligente | Expo Técnica 2026</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         1. PANTALLA PRINCIPAL
+    ========================================= -->
+
+    <section id="inicio" class="pantalla-inicio">
+
+        <div class="inicio-contenido">
+
+            <p class="etiqueta">
+                PROYECTO INTEGRADOR · EXPO TÉCNICA 2026
+            </p>
+
+            <h1>
+                Bebedero
+                <span>Inteligente</span>
+            </h1>
+
+            <p class="descripcion-inicio">
+                Una propuesta tecnológica que combina electrónica,
+                programación y diseño para desarrollar un bebedero
+                con un mecanismo controlado electrónicamente.
+            </p>
+
+            <button
+                class="btn-principal"
+                onclick="mostrarSeccion('proyecto')">
+
+                Conocer el proyecto
+                <span>→</span>
+
+            </button>
+
+            <div class="inicio-pie">
+                6.º Año · Orientación Informática
+            </div>
+
+        </div>
+
+        <div class="decoracion-inicio" aria-hidden="true">
+
+            <div class="circulo circulo-uno"></div>
+            <div class="circulo circulo-dos"></div>
+            <div class="circulo circulo-tres"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+         2. NAVEGACIÓN
+    ========================================= -->
+
+    <header class="navbar">
+
+        <a
+            href="#"
+            class="logo"
+            onclick="mostrarSeccion('inicio'); return false;">
+
+            BEBEDERO<span>.</span>
+
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="menuNavegacion"
+            onclick="alternarMenu()">
+
+            ☰
+
+        </button>
+
+        <nav id="menuNavegacion">
+
+            <a href="#"
+               onclick="mostrarSeccion('inicio'); return false;">
+                Inicio
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('proyecto'); return false;">
+                Proyecto
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('objetivos'); return false;">
+                Objetivos
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('funcionamiento'); return false;">
+                Funcionamiento
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('componentes'); return false;">
+                Componentes
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('agua'); return false;">
+                Agua fría y caliente
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('galeria'); return false;">
+                Galería
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('integrantes'); return false;">
+                Integrantes
+            </a>
+
+            <a href="#"
+               onclick="mostrarSeccion('conclusion'); return false;">
+                Conclusión
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========================================
+             3. PRESENTACIÓN DEL PROYECTO
+        ========================================= -->
+
+        <section id="proyecto" class="seccion">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        01 / PRESENTACIÓN
+                    </p>
+
+                    <h2>
+                        De una necesidad
+                        <span>a una solución.</span>
+                    </h2>
+
+                    <p class="bajada">
+                        Una propuesta tecnológica desarrollada
+                        por estudiantes de Informática.
+                    </p>
+
+                </div>
+
+                <div class="proyecto-grid">
+
+                    <article class="texto-proyecto">
+
+                        <h3>¿En qué consiste nuestro proyecto?</h3>
+
+                        <p>
+                            Nuestro proyecto consiste en diseñar y construir
+                            un bebedero que incorpore componentes electrónicos
+                            para controlar un mecanismo mediante un sensor
+                            ultrasónico, una placa Arduino y un servomotor.
+                        </p>
+
+                        <p>
+                            El sensor ultrasónico permite medir la distancia
+                            hasta un objeto o una persona que se encuentre
+                            frente al dispositivo. Arduino recibe esa
+                            información, la procesa y controla el movimiento
+                            del servomotor según las instrucciones del programa.
+                        </p>
+
+                        <p>
+                            La estructura también contempla el uso de nailon
+                            como parte del mecanismo del prototipo. Además,
+                            el proyecto contará con un interruptor para
+                            seleccionar la opción de agua caliente.
+                        </p>
+
+                        <p>
+                            La finalidad es aplicar los conocimientos
+                            adquiridos en la orientación Informática,
+                            integrando programación, electrónica,
+                            construcción y trabajo en equipo.
+                        </p>
+
+                    </article>
+
+                    <article class="tarjeta-destacada">
+
+                        <span class="icono-tarjeta">01</span>
+
+                        <p class="sobre-titulo">
+                            NUESTRA PROPUESTA
+                        </p>
+
+                        <h3>
+                            Electrónica,
+                            programación
+                            y diseño.
+                        </h3>
+
+                        <p>
+                            Un proyecto educativo que busca transformar
+                            una idea en un prototipo mediante la aplicación
+                            de conocimientos tecnológicos.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             4. OBJETIVOS
+        ========================================= -->
+
+        <section id="objetivos" class="seccion seccion-clara">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        02 / OBJETIVOS
+                    </p>
+
+                    <h2>
+                        ¿Qué queremos lograr?
+                    </h2>
+
+                    <p class="bajada">
+                        Los objetivos principales que orientan
+                        el desarrollo de nuestro trabajo.
+                    </p>
+
+                </div>
+
+                <div class="tarjetas-grid">
+
+                    <article class="tarjeta">
+
+                        <span class="numero-tarjeta">01</span>
+
+                        <h3>Diseñar</h3>
+
+                        <p>
+                            Construir una estructura adecuada para
+                            incorporar los componentes electrónicos
+                            y mecánicos del bebedero.
+                        </p>
+
+                    </article>
+
+                    <article class="tarjeta">
+
+                        <span class="numero-tarjeta">02</span>
+
+                        <h3>Programar</h3>
+
+                        <p>
+                            Utilizar Arduino para interpretar
+                            las mediciones del sensor ultrasónico
+                            y controlar el servomotor.
+                        </p>
+
+                    </article>
+
+                    <article class="tarjeta">
+
+                        <span class="numero-tarjeta">03</span>
+
+                        <h3>Implementar</h3>
+
+                        <p>
+                            Incorporar un interruptor para seleccionar
+                            el modo de agua caliente, de acuerdo
+                            con el diseño eléctrico definitivo.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             5. FUNCIONAMIENTO
+        ========================================= -->
+
+        <section id="funcionamiento" class="seccion seccion-oscura">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        03 / FUNCIONAMIENTO
+                    </p>
+
+                    <h2>
+                        ¿Cómo funciona?
+                    </h2>
+
+                    <p class="bajada">
+                        El sistema combina medición de distancia,
+                        procesamiento electrónico y movimiento mecánico.
+                    </p>
+
+                </div>
+
+                <div class="pasos-funcionamiento">
+
+                    <article class="paso">
+
+                        <div class="paso-numero">01</div>
+
+                        <div class="paso-contenido">
+
+                            <h3>Detección de distancia</h3>
+
+                            <p>
+                                El sensor ultrasónico emite ondas sonoras
+                                y mide el tiempo que tarda en regresar
+                                el eco. Con esa información calcula
+                                la distancia hasta un objeto.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="paso">
+
+                        <div class="paso-numero">02</div>
+
+                        <div class="paso-contenido">
+
+                            <h3>Procesamiento con Arduino</h3>
+
+                            <p>
+                                Arduino recibe la medición del sensor
+                                y la compara con los valores establecidos
+                                en el programa. De esta manera determina
+                                qué acción debe ejecutar el sistema.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="paso">
+
+                        <div class="paso-numero">03</div>
+
+                        <div class="paso-contenido">
+
+                            <h3>Movimiento del servomotor</h3>
+
+                            <p>
+                                Cuando se cumple la condición programada,
+                                Arduino envía una señal de control
+                                al servomotor para mover el mecanismo
+                                previsto en el diseño del bebedero.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="paso">
+
+                        <div class="paso-numero">04</div>
+
+                        <div class="paso-contenido">
+
+                            <h3>Selección de agua caliente</h3>
+
+                            <p>
+                                El interruptor permitirá seleccionar
+                                el modo de agua caliente. El sistema
+                                concreto de suministro dependerá
+                                de cómo se construya el prototipo.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div class="nota-funcionamiento">
+
+                    <strong>Importante:</strong>
+
+                    El sensor ultrasónico mide distancia, no temperatura.
+                    El interruptor selecciona un modo de funcionamiento,
+                    pero no calienta el agua por sí mismo.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             6. COMPONENTES
+        ========================================= -->
+
+        <section id="componentes" class="seccion">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        04 / COMPONENTES
+                    </p>
+
+                    <h2>
+                        Las partes del proyecto.
+                    </h2>
+
+                    <p class="bajada">
+                        Estos son los principales elementos
+                        previstos para construir el prototipo.
+                    </p>
+
+                </div>
+
+                <div class="componentes-grid">
+
+                    <!-- SENSOR ULTRASÓNICO -->
+
+                    <article class="componente">
+
+                        <div class="componente-imagen">
+
+                            <img
+                                src="https://imgs.search.brave.com/W0bk284RQNPmQQQpAC60j9AcPP864PPZv1fxAHf50VA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzkyMzY5Mi1NTEE4/MTY4Mzk2ODkxMl8w/MTIwMjUtRS53ZWJw"
+                                alt="Representación del sensor ultrasónico"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="componente-texto">
+
+                            <span>COMPONENTE 01</span>
+
+                            <h3>Sensor ultrasónico</h3>
+
+                            <p>
+                                Es un dispositivo electrónico que mide
+                                distancias mediante ondas sonoras.
+                                Sus mediciones permiten detectar
+                                la presencia de un objeto dentro
+                                del rango de detección.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SERVOMOTOR -->
+
+                    <article class="componente">
+
+                        <div class="componente-imagen">
+
+                            <img
+                                src="https://imgs.search.brave.com/NgYTdNxTO5HWJwNgB57-ec16tiKqvi5HtH7iXBbNiGo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDc4/MTU5MjcwL2VzL2Zv/dG8vc2Vydm9tb3Rv/ci1kZS1yYy1kZS1t/b2RlbGFkby5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9aEh3/UVhEMDJiQUpjVUNu/dWFrcm1aLVdVd092/RW00d3V0enAtaTZ2/OEtzaz0"
+                                alt="Representación del servomotor"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="componente-texto">
+
+                            <span>COMPONENTE 02</span>
+
+                            <h3>Servomotor</h3>
+
+                            <p>
+                                Es un motor que permite controlar
+                                el movimiento angular de un mecanismo.
+                                En el proyecto se utilizará para
+                                accionar la parte mecánica diseñada.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARDUINO -->
+
+                    <article class="componente">
+
+                        <div class="componente-imagen">
+
+                            <img
+                                src="https://imgs.search.brave.com/c9QOIOq8DrzMQQi_t4SNISQaPXbqHV4V_BUoMUzjuVY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cHJvZ2V0dGlhcmR1/aW5vLmNvbS91cGxv/YWRzLzgvMS8wLzgv/ODEwODgwNzQvYXJk/dWluby1tYW51YWxl/LW9yaWdfb3JpZy5q/cGc"
+                                alt="Representación de la placa Arduino"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="componente-texto">
+
+                            <span>COMPONENTE 03</span>
+
+                            <h3>Arduino</h3>
+
+                            <p>
+                                Es la placa electrónica programable
+                                que recibe los datos del sensor,
+                                ejecuta las instrucciones del programa
+                                y controla el servomotor.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NAILON -->
+
+                    <article class="componente">
+
+                        <div class="componente-imagen">
+
+                            <img
+                                src="https://placehold.co/600x400/edf5f5/153b45?text=Nailon"
+                                alt="Representación del material de nailon"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="componente-texto">
+
+                            <span>COMPONENTE 04</span>
+
+                            <h3>Nailon</h3>
+
+                            <p>
+                                Se utilizará como parte del mecanismo
+                                o de la estructura del prototipo,
+                                según las necesidades del armado.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- INTERRUPTOR -->
+
+                    <article class="componente">
+
+                        <div class="componente-imagen">
+
+                            <img
+                                src="https://placehold.co/600x400/edf5f5/153b45?text=Interruptor"
+                                alt="Representación de un interruptor"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="componente-texto">
+
+                            <span>COMPONENTE 05</span>
+
+                            <h3>Interruptor</h3>
+
+                            <p>
+                                Permitirá seleccionar el modo
+                                de agua caliente mediante una acción
+                                manual del usuario. Su conexión deberá
+                                adecuarse al circuito definitivo.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             7. AGUA FRÍA Y CALIENTE
+        ========================================= -->
+
+        <section id="agua" class="seccion seccion-clara">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        05 / MODOS DE USO
+                    </p>
+
+                    <h2>
+                        Agua fría y caliente.
+                    </h2>
+
+                    <p class="bajada">
+                        El proyecto contempla dos opciones
+                        de utilización del bebedero.
+                    </p>
+
+                </div>
+
+                <div class="modos-grid">
+
+                    <article class="modo modo-frio">
+
+                        <div class="modo-icono" aria-hidden="true">
+                            ❄
+                        </div>
+
+                        <p class="sobre-titulo">
+                            MODO 01
+                        </p>
+
+                        <h3>Agua fría</h3>
+
+                        <p>
+                            Es la opción de funcionamiento normal
+                            del bebedero. El sensor ultrasónico
+                            realizará la medición de distancia
+                            y Arduino controlará el servomotor
+                            de acuerdo con la programación.
+                        </p>
+
+                    </article>
+
+                    <article class="modo modo-caliente">
+
+                        <div class="modo-icono" aria-hidden="true">
+                            ♨
+                        </div>
+
+                        <p class="sobre-titulo">
+                            MODO 02
+                        </p>
+
+                        <h3>Agua caliente</h3>
+
+                        <p>
+                            El usuario podrá seleccionar esta opción
+                            mediante un interruptor. El sistema
+                            permitirá utilizar el modo de agua caliente
+                            según el mecanismo definido para el proyecto.
+                        </p>
+
+                        <div class="aviso-seguridad">
+
+                            El sistema de agua caliente deberá
+                            contar con protección contra quemaduras
+                            y una instalación eléctrica segura.
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             8. GALERÍA
+        ========================================= -->
+
+        <section id="galeria" class="seccion">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        06 / GALERÍA
+                    </p>
+
+                    <h2>
+                        Nuestro proyecto.
+                        <span>En imágenes.</span>
+                    </h2>
+
+                    <p class="bajada">
+                        Espacio destinado a mostrar el diseño,
+                        los materiales y el proceso de construcción
+                        del bebedero.
+                    </p>
+
+                </div>
+
+                <div class="galeria-grid">
+
+                    <figure class="galeria-item galeria-grande">
+
+                        <img
+                            src="foto1.jpg"
+                            alt="Primera fotografía del bebedero"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                        <div class="foto-pendiente">
+
+                            <span>01</span>
+
+                            <p>Primera foto del proyecto</p>
+
+                            <small>
+                                Colocá aquí la imagen del bebedero
+                            </small>
+
+                        </div>
+
+                        <figcaption>
+                            Diseño del bebedero
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="galeria-item">
+
+                        <img
+                            src="foto2.jpg"
+                            alt="Segunda fotografía del bebedero"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                        <div class="foto-pendiente">
+
+                            <span>02</span>
+
+                            <p>Segunda foto del proyecto</p>
+
+                            <small>
+                                Colocá aquí la segunda imagen
+                            </small>
+
+                        </div>
+
+                        <figcaption>
+                            Materiales y componentes
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+                <p class="galeria-nota">
+                    Las fotografías originales se incorporarán
+                    cuando estén disponibles.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             9. APRENDIZAJES
+        ========================================= -->
+
+        <section id="aprendizajes" class="seccion seccion-oscura">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        07 / APRENDIZAJES
+                    </p>
+
+                    <h2>
+                        Lo que ponemos en práctica.
+                    </h2>
+
+                    <p class="bajada">
+                        El proyecto nos permite integrar
+                        conocimientos de diferentes áreas.
+                    </p>
+
+                </div>
+
+                <div class="tarjetas-grid">
+
+                    <article class="tarjeta tarjeta-oscura">
+
+                        <span class="numero-tarjeta">01</span>
+
+                        <h3>Electrónica</h3>
+
+                        <p>
+                            Aprendemos a reconocer componentes,
+                            realizar conexiones y comprender
+                            cómo interactúan dentro de un circuito.
+                        </p>
+
+                    </article>
+
+                    <article class="tarjeta tarjeta-oscura">
+
+                        <span class="numero-tarjeta">02</span>
+
+                        <h3>Programación</h3>
+
+                        <p>
+                            Aplicamos instrucciones, condiciones
+                            y mediciones para controlar el
+                            comportamiento del sistema.
+                        </p>
+
+                    </article>
+
+                    <article class="tarjeta tarjeta-oscura">
+
+                        <span class="numero-tarjeta">03</span>
+
+                        <h3>Trabajo en equipo</h3>
+
+                        <p>
+                            Organizamos tareas, compartimos ideas
+                            y colaboramos en el diseño y el armado
+                            del prototipo.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             10. INTEGRANTES
+        ========================================= -->
+
+        <section id="integrantes" class="seccion">
+
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+
+                    <p class="numero-seccion">
+                        08 / EQUIPO
+                    </p>
+
+                    <h2>
+                        Nuestro equipo.
+                    </h2>
+
+                    <p class="bajada">
+                        Somos estudiantes de 6.º Año de la
+                        orientación Informática y trabajamos
+                        juntos en el desarrollo de nuestro
+                        proyecto integrador para la Expo Técnica 2026.
+                    </p>
+
+                </div>
+
+                <div class="integrantes-grid">
+
+                    <article class="integrante">
+
+                        <div class="integrante-avatar">
+    <img src="imagen/axel.jpeg" alt="Foto de Axel Ortigoza Román">
+</div>
+
+                        <span>INTEGRANTE 01</span>
+
+                        <h3>Ortigoza Axel Román</h3>
+
+                        <p>
+                            Integrante del equipo de desarrollo
+                            del bebedero y del proyecto integrador.
+                        </p>
+
+                    </article>
+
+
+                    <article class="integrante">
+
+    <div class="integrante-avatar">
+    <img src="imagen/franco.jpeg" alt="Foto de Franco Vier">
+</div>
+
+    <span>INTEGRANTE 02</span>
+
+    <h3>Vier Franco</h3>
+
+    <p>
+        Integrante del equipo encargado
+        del desarrollo y la construcción
+        del prototipo.
+    </p>
+
+</article>
+
+
+                    <article class="integrante">
+
+                        <div class="integrante-avatar">
+    <img src="imagen/martin.jpeg" alt="Foto de Martín Rojas">
+</div>
+                        <span>INTEGRANTE 03</span>
+
+                        <h3>Rojas Martín</h3>
+
+                        <p>
+                            Integrante del equipo que participa
+                            en el armado y las pruebas del proyecto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="integrante">
+
+                    <div class="integrante-avatar">
+    <img src="imagen/orlando.jpeg" alt="Foto de Orlando Martínez">
+</div>
+
+                        <span>INTEGRANTE 04</span>
+
+                        <h3>Martínez Orlando</h3>
+
+                        <p>
+                            Integrante del equipo que colabora
+                            en el diseño y la preparación
+                            del prototipo.
+                        </p>
+
+                    </article>
+
+
+                    <article class="integrante">
+
+                       <div class="integrante-avatar">
+    <img src="imagen/santiago.jpeg" alt="Foto de Santiago Nicolás Villar">
+</div>
+                        <span>INTEGRANTE 05</span>
+
+                        <h3>Villar Santiago Nicolás</h3>
+
+                        <p>
+                            Integrante del equipo que participa
+                            en el desarrollo, el armado
+                            y la presentación del proyecto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="integrante">
+
+                        <div class="integrante-avatar">
+    <img src="imagen/jeremias.jpeg" alt="Foto de Jeremías González">
+</div>
+
+                        <span>INTEGRANTE 06</span>
+
+                        <h3>González Jeremías</h3>
+
+                        <p>
+                            Integrante del equipo que colabora
+                            en la construcción y el desarrollo
+                            del prototipo.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             11. CONCLUSIÓN
+        ========================================= -->
+
+        <section id="conclusion" class="seccion seccion-clara">
+
+            <div class="contenedor">
+
+                <div class="conclusion-contenido">
+
+                    <p class="numero-seccion">
+                        09 / CONCLUSIÓN
+                    </p>
+
+                    <h2>
+                        Tecnología aplicada
+                        a una idea.
+                    </h2>
+
+                    <p>
+                        El desarrollo de nuestro bebedero nos permite
+                        aplicar conocimientos de programación,
+                        electrónica y construcción. Mediante la
+                        integración de un sensor ultrasónico,
+                        Arduino y un servomotor, buscamos construir
+                        un prototipo que responda a las condiciones
+                        establecidas en su programación.
+                    </p>
+
+                    <p>
+                        El proyecto también nos permite comprender
+                        la importancia del diseño, la planificación,
+                        la seguridad y la colaboración entre los
+                        integrantes para desarrollar una solución
+                        tecnológica.
+                    </p>
+
+                    <button
+                        class="btn-principal"
+                        onclick="mostrarSeccion('inicio')">
+
+                        Volver al inicio
+                        <span>↑</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         12. PIE DE PÁGINA
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <div class="footer-marca">
+
+                <h3>
+                    BEBEDERO<span>.</span>
+                </h3>
+
+                <p>
+                    Proyecto Integrador · Expo Técnica 2026
+                </p>
+
+            </div>
+
+            <div class="footer-datos">
+
+                <p>6.º Año</p>
+
+                <p>Orientación Informática</p>
+
+                <p>Equipo de seis integrantes</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-final">
+            Proyecto educativo de tecnología · 2026
+        </div>
+
+    </footer>
+
+
+    <!-- ========================================
+         13. JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+        const menu = document.getElementById("menuNavegacion");
+
+        const botonMenu = document.getElementById("menuToggle");
+
+
+        /*
+         * Mostrar una sección y ocultar las demás.
+         */
+
+        function mostrarSeccion(id) {
+
+            const secciones = document.querySelectorAll(
+                "#inicio, main > section"
+            );
+
+            const seleccionada = document.getElementById(id);
+
+            if (!seleccionada) {
+                return;
+            }
+
+            secciones.forEach(function(seccion) {
+
+                seccion.style.display = "none";
+
+            });
+
+            seleccionada.style.display =
+                id === "inicio" ? "flex" : "block";
+
+
+            /*
+             * Cerrar el menú después de elegir una sección.
+             */
+
+            menu.classList.remove("menu-abierto");
+
+            botonMenu.setAttribute("aria-expanded", "false");
+
+            botonMenu.setAttribute("aria-label", "Abrir menú");
+
+
+            /*
+             * Volver al principio de la página.
+             */
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /*
+         * Abrir y cerrar el menú de navegación.
+         */
+
+        function alternarMenu() {
+
+            const abierto = menu.classList.toggle("menu-abierto");
+
+            botonMenu.setAttribute(
+                "aria-expanded",
+                abierto ? "true" : "false"
+            );
+
+            botonMenu.setAttribute(
+                "aria-label",
+                abierto ? "Cerrar menú" : "Abrir menú"
+            );
+
+        }
+
+
+        /*
+         * Cerrar el menú al presionar Escape.
+         */
+
+        document.addEventListener("keydown", function(evento) {
+
+            if (evento.key === "Escape") {
+
+                menu.classList.remove("menu-abierto");
+
+                botonMenu.setAttribute("aria-expanded", "false");
+
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+
+            }
+
+        });
+
+
+        /*
+         * Mostrar solamente la portada al cargar la página.
+         */
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const secciones = document.querySelectorAll(
+                "#inicio, main > section"
+            );
+
+            secciones.forEach(function(seccion) {
+
+                seccion.style.display =
+                    seccion.id === "inicio" ? "flex" : "none";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
